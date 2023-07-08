@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Survey Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .survey-form {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .survey-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .survey-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .survey-form input[type="text"],
+    .survey-form input[type="email"],
+    .survey-form select,
+    .survey-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .survey-form input[type="radio"],
+    .survey-form input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    .survey-form .option-label {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .survey-form textarea {
+      height: 100px;
+    }
+
+    .survey-form input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .survey-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="survey-form">
+    <h2>Survey Form</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">Select...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <label>Favorite Color:</label>
+      <div class="option-label">
+        <input type="radio" id="color-red" name="color" value="red">
+        <label for="color-red">Red</label>
+      </div>
+      <div class="option-label">
+        <input type="radio" id="color-blue" name="color" value="blue">
+        <label for="color-blue">Blue</label>
+      </div>
+      <div class="option-label">
+        <input type="radio" id="color-green" name="color" value="green">
+        <label for="color-green">Green</label>
+      </div>
+
+      <label>Interests:</label>
+      <div class="option-label">
+        <input type="checkbox" id="interest-sports" name="interests" value="sports">
+        <label for="interest-sports">Sports</label>
+      </div>
+      <div class="option-label">
+        <input type="checkbox" id="interest-music" name="interests" value="music">
+        <label for="interest-music">Music</label>
+      </div>
+      <div class="option-label">
+        <input type="checkbox" id="interest-travel" name="interests" value="travel">
+        <label for="interest-travel">Travel</label>
+      </div>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" name="feedback" required></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</body>
+</html>
